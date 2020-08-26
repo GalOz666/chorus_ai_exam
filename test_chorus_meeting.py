@@ -11,6 +11,7 @@ class BaseTest:
     @pytest.fixture(scope='function', autouse=True)
     def start_and_end_test(self):
         self.driver = chrome_driver()
+        self.driver.get('https://chorus.ai/')
         yield
         self.driver.close()
         self.driver.quit()

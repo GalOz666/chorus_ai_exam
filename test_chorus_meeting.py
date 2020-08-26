@@ -40,7 +40,7 @@ class TestMeetingFunctions(BaseTest):
         assert '0:00' not in MeetingPage.current_play_time.text, "time did not change after hitting play"
         MeetingPage.play_pause_button.click()
 
-    def test_comments_section(self):
+    def test_comments_section(self, login_fixture):
         random_text = uuid.uuid4()
         play_time = MeetingPage.current_play_time.text
         MeetingPage.comments_button.click()
@@ -58,6 +58,6 @@ class TestMeetingFunctions(BaseTest):
         assert comment_time_stamp in play_time, \
             f"comment was added with wrong time code! expected: {play_time}, got: {comment_time_stamp}"
 
-    def test_transcription(self):
+    def test_transcription(self, login_fixture):
         MeetingPage.view_transcript.click()
         assert len(MeetingPage.transcript_elements) > 3, "transcript is no more than 3 items!"

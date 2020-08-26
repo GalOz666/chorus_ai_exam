@@ -1,0 +1,13 @@
+1. test that trying to access meeting leads to login page and that login works  (https://www.chorus.ai/login led me to
+a 404 page [old view?], so I am using the link you sent)
+
+2. test that you can click on play and pause - and that video is playing.
+
+3. check that the buttons to more 15 seconds back and forth work (I was able to manually "break" the player
+as you can watch here: https://drive.google.com/file/d/1RC_bjflB7wQfgiJZoAh9McTL7DdfrSVL/view?usp=sharing)
+
+4. check that you can view transcript (and that it has more than a few entries)
+
+5. check that the sharing splash opens and closes
+
+6. check that you can open comments splash and that your new comment registers

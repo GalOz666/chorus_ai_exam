@@ -5,7 +5,7 @@ from webdriver import chrome_driver
 
 class BaseTest:
 
-    @pytest.fixture(scope='function')
+    @pytest.fixture(scope='function', autouse=True)
     def start_and_end_test(self):
         self.driver = chrome_driver()
         yield
@@ -13,5 +13,7 @@ class BaseTest:
         self.driver.quit()
 
     def login_fixture(self):
+        self.driver.get('https://www.chorus.ai/login')
+
 
 
